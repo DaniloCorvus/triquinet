@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://paginaswebenbogota.net/custom/style.css">
+
+</head>
+
+<body>
+
+    <!-- color: #ED2260;
+    font-family: "Baloo Da 2", rubik;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 0.6em;
+    } -->
+
+
+    <div class="elementor-widget-container">
+        <h2 class="elementor-heading-title elementor-size-default"><br><br>GRACIAS POR SER PARTE<br><br>
+            DE NUESTRA COMUNIDAD<br><br></h2>
+    </div>
+
+
+    <style>
+        #regiration_form fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        .error {
+            background-color: #ffffff !important;
+            border-color: red !important;
+            border-width: 2px 2px 2px 2px !important;
+            border-radius: 20px 20px 20px 20px !important;
+        }
+    </style>
+
+    <div class="container form-registro mt-5">
+        <form id="regiration_form" action="<?php echo get_site_url(); ?>/wp-content/plugins/triquinet-personalized/includes/register-vendor-form.php" method="post" enctype="multipart/form-data">
+
+
+            <!-- <div class="row col-md-12">
+                <div class="col-md-4 text-center"> -->
+            <h4 class="h4-custom-dan text-step1">1. Registro de representante</h4>
+            <!-- </div>
+
+            <div class="col-md-4 text-center"> -->
+            <h4 class="h4-custom-dan text-step2">2. Registro de marca</h4>
+            <!-- </div>
+
+            <div class="col-md-4 text-center"> -->
+            <h4 class="h4-custom-dan text-step3">3. Banco</h4>
+            <!-- </div> -->
+            <!-- </div> -->
+
+            <fieldset class="form-step1">
+
+                <div class=" row col-md-4 text-center mt-3">
+                    <h3 style="color: #bf375a;">Registro de representante</h3>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-4 col-sm-12 form-group mt-3">
+                        <label for="correo-electronico">*Correo Electrónico</label>
+                        <div class="w-100"></div>
+                        <input type="email" required class=" style-input-dan full-width-dan" id="correo-electronico" name="correo-electronico" aria-describedby="textHelpCorreoElectronico" placeholder="example@example.com">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group mt-3">
+                        <label for="nombres">*Nombre</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan " id="nombres" name="nombres" aria-describedby="textHelpNombreUsuario" placeholder="username" pattern="[A-Za-z0-9]{4,16}">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group mt-3">
+                        <label for="apellidos">*Apellidos</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan " id="apellidos" name="apellidos" aria-describedby="textHelpNombreUsuario" placeholder="username" pattern="[A-Za-z0-9]{4,16}">
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-4 col-sm-12 form-group ">
+                        <label for="personal-document-type">Tipo documento</label>
+                        <div class="w-100"></div>
+
+                        <select class="style-input-dan full-width-dan" required name="personal-document-type" id="personal-document-type" style=" height: 35px !important;
+                                min-height: 35px !important;">
+                            <option>Cedula</option>
+                            <option>Passaporte</option>
+                            <option>Nit</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="cedula-nit">Número del documento</label>
+                        <div class="w-100"></div>
+                        <input type="number" class=" style-input-dan full-width-dan" required id="cedula-nit" name="cedula-nit" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="numero-telefono">*Telefono/Celular</label>
+                        <div class="w-100"></div>
+                        <input type="number" class=" style-input-dan full-width-dan" required id="numero-telefono" name="numero-telefono" aria-describedby="textHelpRepContrasenia" value="">
+                    </div>
+                </div>
+
+
+                <div class="row ">
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="contrasenia">Contraseña</label>
+                        <div class="w-100"></div>
+                        <input type="password" class=" style-input-dan full-width-dan" required id="contrasenia" name="contrasenia" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="rep-contrasenia">Confirme su contraseña</label>
+                        <div class="w-100"></div>
+                        <input type="password" class=" style-input-dan full-width-dan" required id="rep-contrasenia" name="rep-contrasenia" aria-describedby="textHelpRepContrasenia" value="">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+
+                    <div class="col-md-12 col-sm-12 custom-check-wrap">
+
+
+
+                        <label><input type="checkbox" checked="checked" name="checkTerminos" class="red" /><span class="text text-center" style="margin: 5px 10px">
+
+
+                                Acepto los términos y condiciones, políticas de privacidad y tratamiento de datos personales.
+                                Acepto recibir mails e información de <a style="color: #bf375a;" href="#"> triquinet.com</a>
+
+
+                            </span></label>
+                    </div>
+                </div>
+
+                <input type="button" class="next btn btn-custom my-3 align-self-center" value="Siguiente" />
+            </fieldset>
+            <fieldset class="form-step2">
+
+                <div class=" row col-md-4 text-center mt-3">
+                    <h4 style="color: #bf375a;">Registro de marca</h4>
+                </div>
+
+                <div class="row tex-left justify-content-left">
+
+                    <div class="col-md-4 form-group fotografia-user-box" style="height: 0px;">
+                        <img src="">
+                        <input type="file" required class="add-image file-input" name="fotografia-user" id="fotografia-user">
+                        <?php wp_nonce_field('fotografia-user', 'fotografia-user'); ?>
+                        <label for="fotografia">Logo *</label>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="nombre-marca">*Nombre de la marca</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan " id="nombre-marca" name="nombre-marca" aria-describedby="textHelpNombreUsuario" placeholder="username" pattern="[A-Za-z0-9]{4,16}">
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="offset-4 col-md-4 col-sm-12 form-group">
+                        <label for="razon-social">*Razón social</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan " id="razon-social" name="razon-social" aria-describedby="textHelpNombreUsuario" placeholder="username" pattern="[A-Za-z0-9]{4,16}">
+                    </div>
+
+                    <div class="offset-4 col-md-4 col-sm-12 form-group">
+                        <label for="numero-nit-marca">*Nit</label>
+                        <div class="w-100"></div>
+                        <input type="number" required class=" style-input-dan full-width-dan" id="numero-nit-marca" name="numero-nit-marca" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                </div>
+
+                <div class="row tex-left justify-content-center">
+                    <div class="offset-4 col-md-4 col-sm-12 form-group">
+                        <label for="numero-nit-marca">*Nit</label>
+                        <div class="w-100"></div>
+                        <input type="number" required class=" style-input-dan full-width-dan" id="numero-nit-marca" name="numero-nit-marca" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="row ">
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="user-departamento">*Departamento</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan" id="user-departamento" name="user-departamento" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="user-ciudad">*Ciudad/Municipio</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan" id="user-ciudad" name="user-ciudad" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="barrio">*Barrio</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan" id="barrio" name="barrio" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                </div>
+
+                <div class="row ">
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="direccion">*Dirección</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan" id="direccion" name="direccion" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                </div>
+
+                <div class="row mt-3">
+
+                    <div class="col-md-2">Dibujos</div>
+                    <div class="col-md-7">
+
+                        <p style="font-size: 1em">
+                            <small style="color: #bf375a; font-size: 1.2em">
+                                ¿Estás en la capacidad de despachar tu producto en 2 días hábiles?
+                            </small>
+
+                            <br />
+                            Tendrías que entregalo empacado en cualquier punto Servientrega,
+                            con la guía de envío impresa que te enviaremos al correo una vez
+                            vendido tu producto.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+
+                        <label>SI<input type="checkbox" checked="checked" name="checkTerminos" class="red" />
+                            <span class="text text-center" style="margin: 5px 10px"></span></label>
+
+                        <label>NO<input type="checkbox" name="checkTerminos" class="red" />
+                            <span class="text text-center" style="margin: 5px 10px"></span></label>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+
+                    <div class="col-md-2">Dibujos</div>
+                    <div class="col-md-7">
+
+                        <p style="font-size: 1em">
+                            <small style="color: #bf375a; font-size: 1.2em">
+                                ¿Estás en la capacidad de entregar el producto en tu punto de venta?
+                            </small>
+
+                            <br />
+                            Solo aplica si el cliente y la marca se encuentran en la misma ciudad.
+                            Algunos clientes prefieren recoger el producto para ahorrar el costo
+                            del envío.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+
+                        <label>SI<input type="checkbox" checked="checked" name="checkTerminos" class="red" />
+                            <span class="text text-center" style="margin: 5px 10px"></span></label>
+
+                        <label>NO<input type="checkbox" name="checkTerminos" class="red" />
+                            <span class="text text-center" style="margin: 5px 10px"></span></label>
+                    </div>
+                </div>
+
+
+
+
+
+                <input type="button" name="previous" class="previous btn-custom-my danger mx-3" value="Previo" />
+                <input type="button" name="next" class="next btn btn-custom mx-3" value="Siguiente" />
+            </fieldset>
+            <fieldset class="form-step3">
+
+                <div class=" row col-md-4 text-center mt-3">
+                    <h4 style="color: #bf375a;">Banco</h4>
+                </div>
+
+
+
+                <p style="font-size:1.5em">Recuerda que estos datos bancarios son para poder hacer las transferencias de tus ventas a tu cuenta.
+                    No hacemos pagos en efectivo
+                    No pagamos con cheque</p>
+
+                <div class="row ">
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="banco">*Nombre del banco</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan " id="banco" name="banco" aria-describedby="textHelpNombreUsuario" placeholder="username" pattern="[A-Za-z0-9]{4,16}">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group ">
+                        <label for="tipo-cuenta">*Tipo de cuenta</label>
+                        <div class="w-100"></div>
+
+                        <select class="style-input-dan full-width-dan " required name="tipo-cuenta" id="tipo-cuenta" style="height: 35px !important;
+                                min-height: 35px !important;">
+                            <option>Ahorros</option>
+                            <option>Corriente</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="numero-cuenta">*Número de cuenta</label>
+                        <div class="w-100"></div>
+                        <input type="number" required class=" style-input-dan full-width-dan" id="numero-cuenta" name="numero-cuenta" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+
+
+                </div>
+
+                <div class="row ">
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="nombre-titular">*Nombre del titular de la cuenta</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan" id="nombre-titular" name="nombre-titular" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="apellidostitular">*Apellidos del titular de la cuenta</label>
+                        <div class="w-100"></div>
+                        <input type="text" required class=" style-input-dan full-width-dan" id="apellidostitular" name="apellidostitular" aria-describedby="textHelpRepContrasenia" value="">
+                    </div>
+                </div>
+
+                <div class="row ">
+
+                    <div class="col-md-4 col-sm-12 form-group ">
+                        <label for="document-type-titular">*Tipo de documento del titular</label>
+                        <div class="w-100"></div>
+
+                        <select class=" style-input-dan full-width-dan " required name="document-type-titular" id="document-type-titular" style="height: 35px !important;
+                               min-height: 35px !important;">
+                            <option>Cedula</option>
+                            <option>Passaporte</option>
+                            <option>Nit</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 form-group">
+                        <label for="numero-documento-titular">*Número del documento</label>
+                        <div class="w-100"></div>
+                        <input type="number" required class=" style-input-dan full-width-dan" id="numero-documento-titular" name="numero-documento-titular" aria-describedby="textHelpContrasenia" value="">
+                    </div>
+                </div>
+
+                <input type="button" name="previous" class="previous btn-custom-my danger mx-3" value="Previo" />
+                <input type="submit" name="submit" class="submit btn btn-custom mx-3" value="Enviar" id="submit_data" />
+            </fieldset>
+
+        </form>
+    </div>
+
+    <script>
+        var paso = 1;
+        var current = 1,
+            current_step, next_step, steps;
+
+        document.querySelector(".text-step" + paso).classList.add('custom-text-h3')
+
+        steps = $("fieldset").length;
+        $(".next").click(function() {
+
+            var isValid = true;
+
+            $(".form-step" + paso + " :input[required='required']").each(function(idx, elem) {
+                $(elem).removeClass("error");
+                if ($(elem).val().trim() === "") {
+                    isValid = false;
+                    $(elem).addClass("error");
+                }
+            });
+
+            if (isValid) {
+                document.querySelector(".text-step" + paso).classList.remove('custom-text-h3')
+                paso++
+                document.querySelector(".text-step" + paso).classList.add('custom-text-h3')
+                current_step = $(this).parent();
+                next_step = $(this).parent().next();
+                next_step.show();
+                current_step.hide();
+            } else {
+                alert('Debes completar todos los campos');
+            }
+        });
+        $(".previous").click(function() {
+
+            document.querySelector(".text-step" + paso).classList.remove('custom-text-h3')
+            paso--
+
+            document.querySelector(".text-step" + paso).classList.add('custom-text-h3')
+
+            current_step = $(this).parent();
+            next_step = $(this).parent().prev();
+            next_step.show();
+            current_step.hide();
+        });
+    </script>
+</body>
+
+</html>
